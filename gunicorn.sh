@@ -11,14 +11,13 @@ python3 manage.py collectstatic -- no-input
 
 echo "Migrations done"
 
-cd /var/lib/jenkins/workspace/django-cicd
+cd /var/lib/jenkins/workspace/django-cicd-pipeline
 
 sudo cp -rf gunicorn.socket /etc/systemd/system/
 sudo cp -rf gunicorn.service /etc/systemd/system/
 
 echo "$USER"
 echo "$PWD"
-
 
 
 sudo systemctl daemon-reload
@@ -31,7 +30,6 @@ sudo systemctl enable gunicorn
 echo "Gunicorn has been enabled."
 
 sudo systemctl restart gunicorn
-
 
 sudo systemctl status gunicorn
 
