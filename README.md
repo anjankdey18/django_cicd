@@ -5,6 +5,36 @@
 ## A CI CD Project based on Jenkins Tool for Django Project (Python)
 This is a Django project that runs a single page web application. It allows one to eliminate the admin overhead that comes with testing your Django project in a production like environment. This will allow you to make changes and see the effects almost immediately.
 
+## Create virtual env for Django Project (Python)
+in your project dir, create virtual environment named "env" using the 
+command: python3 -m venv env a
+nd you will be able to see env dir within your project. then activate your env using the 
+command: source env/bin/activate 
+when it is activate successfully you will be able to see 
+[ans@centos9ansmaster django_cicd]$ source env/bin/activate
+(env) [ans@centos9ansmaster django_cicd]$ 
+
+Installing an official release with pip¶
+This is the recommended way to install Django.
+
+1. Install pip. The easiest is to use the standalone pip installer. If your distribution already has pip installed, you might need to update it if it’s outdated. If it’s outdated, you’ll know because installation won’t work.
+
+2. Take a look at venv. This tool provides isolated Python environments, which are more practical than installing packages systemwide. It also allows installing packages without administrator privileges. The contributing tutorial walks through how to create a virtual environment.
+
+3. After you’ve created and activated a virtual environment, enter the command:
+
+$ python -m pip install Django
+
+Then check the Django version using the command: pip freeze
+(env) [ans@centos9ansmaster django_cicd]$ pip freeze
+asgiref==3.7.2
+Django==4.2.10
+sqlparse==0.4.4
+typing_extensions==4.9.0
+
+4. start the sample django project named "app" using the command: django-admin startproject app
+(env) [ans@centos9ansmaster django_cicd]$ django-admin startproject apps
+
 **1)** If you follow the youtube video then it means you'll be using Jenkins to set up a CI/CD pipeline. Now this project is specific to Django project but you can edit the files to fit your use case scenario. I'll be explaining what each file used in the pipeline does and variables you'll need to change for your project to run. Again this is specific for Django projects. 
 
 **2)** `initial-setup.sh` - This file is the first file to look at when setting up this project. It installs the required packages to make this project work such as Nginx, Jenkins, Python etc. Refer to the youtube video to see how and when it is used.
