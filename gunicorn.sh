@@ -17,6 +17,9 @@ cd /var/lib/jenkins/workspace/django-cicd-pipeline
 sudo cp -rf gunicorn.socket /etc/systemd/system/
 sudo cp -rf gunicorn.service /etc/systemd/system/
 
+sudo chmod +x gunicorn.socket
+sudo chmod +x gunicorn.service
+
 echo "$USER"
 echo "$PWD"
 
