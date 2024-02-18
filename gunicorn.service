@@ -5,7 +5,6 @@ After=network.target
 
 [Service]
 User=root
-#User=ans
 Group=www-data
 WorkingDirectory=/var/lib/jenkins/workspace/django-cicd-pipeline/app
 ExecStart=/var/lib/jenkins/workspace/django-cicd-pipeline/env/bin/gunicorn \
