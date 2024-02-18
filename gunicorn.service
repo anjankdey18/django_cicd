@@ -10,7 +10,6 @@ WorkingDirectory=/var/lib/jenkins/workspace/django-cicd-pipeline/app
 ExecStart=/var/lib/jenkins/workspace/django-cicd-pipeline/env/bin/gunicorn \
           --error-logfile /var/lib/jenkins/workspace/django-cicd-pipeline/error.log \
           --workers 3 \
-          --log-level debug \
           --capture-output --log-level debug \
           --bind unix:/run/gunicorn.sock \
           app.wsgi:application
