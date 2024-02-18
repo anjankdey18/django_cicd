@@ -7,8 +7,8 @@ This is a Django project that runs a single page web application. It allows one 
 
 ## Create virtual env for Django Project (Python)
 in your project dir, create virtual environment named "env" using the 
-command: python3 -m venv env a
-nd you will be able to see env dir within your project. then activate your env using the 
+command: python3 -m venv env 
+and you will be able to see env dir within your project. then activate your env using the 
 command: source env/bin/activate 
 when it is activate successfully you will be able to see 
 [ans@centos9ansmaster django_cicd]$ source env/bin/activate
@@ -33,7 +33,7 @@ sqlparse==0.4.4
 typing_extensions==4.9.0
 
 4. start the sample django project named "app" using the command: django-admin startproject app
-(env) [ans@centos9ansmaster django_cicd]$ django-admin startproject apps
+(env) [ans@centos9ansmaster django_cicd]$ django-admin startproject app
 
 **1)** If you follow the youtube video then it means you'll be using Jenkins to set up a CI/CD pipeline. Now this project is specific to Django project but you can edit the files to fit your use case scenario. I'll be explaining what each file used in the pipeline does and variables you'll need to change for your project to run. Again this is specific for Django projects. 
 
