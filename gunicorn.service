@@ -4,8 +4,8 @@ Requires=gunicorn.socket
 After=network.target
 
 [Service]
-#User=root
-User=ans
+User=root
+#User=ans
 Group=www-data
 WorkingDirectory=/var/lib/jenkins/workspace/django-cicd-pipeline/app
 #ExecStart=/var/lib/jenkins/workspace/django-cicd-pipeline/env/bin/gunicorn --workers 3 --log-level debug --error-logfile /var/lib/jenkins/workspace/django-cicd-pipeline/error.log --bind unix:/run/gunicorn.sock app.wsgi:application
@@ -14,8 +14,8 @@ ExecStart=/var/lib/jenkins/workspace/django-cicd-pipeline/env/bin/gunicorn \
           --error-logfile /var/lib/jenkins/workspace/django-cicd-pipeline/error.log \
           --workers 3 \
           --log-level debug \
-          --bind unix:/run/gunicorn.sock \
           --capture-output --log-level debug \
+          --bind unix:/run/gunicorn.sock \
           app.wsgi:application
 
 [Install]
